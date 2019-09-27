@@ -1,0 +1,211 @@
+{% extends "bases/page_base.html" %}
+
+{% block content %}
+<div class="page-title lb single-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <h2><i class="fa fa-gears bg-orange"></i> Gadgets <small class="hidden-xs-down hidden-sm-down">Nulla felis eros, varius sit amet volutpat non. </small></h2>
+                </div><!-- end col -->
+                <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Blog</a></li>
+                        <li class="breadcrumb-item active">Gadgets</li>
+                    </ol>
+                </div><!-- end col -->                    
+            </div><!-- end row -->
+        </div><!-- end container -->
+</div><!-- end page-title -->
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                    <div class="sidebar">
+                        
+                        {% for categorys in category %}
+
+                        <div class="widget">
+                            <h2 class="widget-title">{{categorys.title}}</h2>
+                            <div class="trend-videos">
+                                
+
+                                <div class="blog-box">
+                                    <div class="post-media">
+                                        <a href="tech-single.html" title="">
+                                            <img src="/static/upload/tech_video_03.jpg" alt="" class="img-fluid">
+                                            <div class="hovereffect">
+                                                <span class="videohover"></span>
+                                            </div><!-- end hover -->
+                                        </a>
+                                    </div><!-- end media -->
+                                    <div class="blog-meta">
+                                        <h4><a href="tech-single.html" title="">{{categorys.description}}</a></h4>
+                                    </div><!-- end meta -->
+                                </div><!-- end blog-box -->
+                            </div><!-- end videos -->
+                        </div><!-- end widget -->
+
+                        {% endfor %}
+
+                        {% for categorys in category %}
+                        <div class="widget">
+                            <h2 class="widget-title">{{categorys.title}}</h2>
+                            <div class="blog-list-widget">
+                                <div class="list-group">
+                                    <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                        <div class="w-100 justify-content-between">
+                                            <img src="/static/upload/tech_blog_08.jpg" alt="" class="img-fluid float-left">
+                                            <h5 class="mb-1">{{categorys.description}}/h5>
+                                            <small>{{categorys.date_add}}</small>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div><!-- end blog-list -->
+                        </div><!-- end widget -->
+                        {% endfor %}
+                        
+                        {% for categorys in category %}
+                        <div class="widget">
+                            <h2 class="widget-title">{{categorys.title}}</h2>
+                            <div class="blog-list-widget">
+                                <div class="list-group">
+                                    <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                        <div class="w-100 justify-content-between">
+                                            <img src="/static/upload/tech_blog_02.jpg" alt="" class="img-fluid float-left">
+                                            <h5 class="mb-1">{{categorys.description}}/h5>
+                                            <span class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </a>
+
+                                  
+                                </div>
+                            </div><!-- end blog-list -->
+                        </div><!-- end widget -->
+                        {% endfor %}
+                        
+
+                        {% for categorys in category %}
+                        <div class="widget">
+                            <h2 class="widget-title">{{categorys.title}}</h2>
+
+                            <div class="row text-center">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <a href="#" class="social-button facebook-button">
+                                        <i class="fa fa-facebook"></i>
+                                        <p>27k</p>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <a href="#" class="social-button twitter-button">
+                                        <i class="fa fa-twitter"></i>
+                                        <p>{{categorys.statut}}</p>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <a href="#" class="social-button google-button">
+                                        <i class="fa fa-google-plus"></i>
+                                        <p>{{categorys.statut}}</p>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <a href="#" class="social-button youtube-button">
+                                        <i class="fa fa-youtube"></i>
+                                        <p>{{categorys.statut}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div><!-- end widget -->
+                        
+                        {% endfor %}
+
+                       
+                    </div><!-- end sidebar -->
+                </div><!-- end col -->
+                {% for categorys in category %}
+
+                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                    <div class="page-wrapper">
+                        <div class="blog-grid-system">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="tech-single.html" title="">
+                                                <img src="/static/upload/tech_menu_01.jpg" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div><!-- end hover -->
+                                            </a>
+                                        </div><!-- end media -->
+                                        <div class="blog-meta big-meta">
+                                            <span class="color-orange"><a href="tech-category-01.html" title="">{{categorys.title}}</a></span>
+                                            <h4><a href="tech-single.html" title="">{{categorys.description}}</a></h4>
+                                            <p>{{categorys.article}}</p>
+                                            <small><a href="tech-single.html" title="">{{categorys.date_add}}</a></small>
+                                            <small><a href="tech-author.html" title="">{{categorys.nom_auteur}}</a></small>
+                                            <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> {{categorys.statut}}</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+                                </div><!-- end col -->
+
+
+                                <div class="col-md-6">
+                                    <div class="blog-box">
+                                        <div class="post-media">
+                                            <a href="tech-single.html" title="">
+                                                <img src="/static/upload/tech_menu_12.jpg" alt="" class="img-fluid">
+                                                <div class="hovereffect">
+                                                    <span></span>
+                                                </div><!-- end hover -->
+                                            </a>
+                                        </div><!-- end media -->
+                                        <div class="blog-meta big-meta">
+                                            <span class="color-orange"><a href="tech-category-01.html" title="">{{categorys.title}}</a></span>
+                                            <h4><a href="tech-single.html" title="">{{categorys.description}}</a></h4>
+                                            <p>{{categorys.article}}</p>
+                                            <small><a href="tech-single.html" title="">{{categorys.date_add}}/a></small>
+                                            <small><a href="tech-author.html" title="">{{categorys.nom_auteur}}</a></small>
+                                            <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> {{categorys.statut}}</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+                                </div><!-- end col -->
+                            </div><!-- end row -->
+                        </div><!-- end blog-grid-system -->
+                    </div><!-- end page-wrapper -->
+                    {% endfor %}
+                    <hr class="invis3">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-start">
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div><!-- end col -->
+
+                    </div><!-- end row -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+</section>
+
+{% endblock content %}
+
